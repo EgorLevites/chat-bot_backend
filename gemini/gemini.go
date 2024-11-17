@@ -16,10 +16,16 @@ import (
 )
 
 // Load environment variables from the .env file
+// func init() {
+// 	err := godotenv.Load()
+// 	if err != nil {
+// 		log.Fatalf("Error loading .env file: %v", err)
+// 	}
+// }
 func init() {
 	err := godotenv.Load()
 	if err != nil {
-		log.Fatalf("Error loading .env file: %v", err)
+		log.Println("No .env file found. Using system environment variables.")
 	}
 }
 
