@@ -16,12 +16,6 @@ import (
 )
 
 // Load environment variables from the .env file
-// func init() {
-// 	err := godotenv.Load()
-// 	if err != nil {
-// 		log.Fatalf("Error loading .env file: %v", err)
-// 	}
-// }
 func init() {
 	err := godotenv.Load()
 	if err != nil {
@@ -75,8 +69,6 @@ func GenerateResponse(message string) (string, error) {
     	cleanContent := cleanResponse(rawContent)
     	return cleanContent, nil
 	}
-
-
 
     return "", fmt.Errorf("no response text found in the generated content")
 }
